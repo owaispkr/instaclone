@@ -9,6 +9,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import LandingScreen from "./components/auth/Landing";
 import RegisterScreen from "./components/auth/Register";
+import LoginScreen from "./components/auth/Login";
 
 import { View, Text } from 'react-native'
 
@@ -42,7 +43,6 @@ export class App extends Component {
 
   componentDidMount(){
     
-
     firebase.auth().onAuthStateChanged((user) => {
       if(!user){
         this.setState({
